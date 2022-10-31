@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {IOption} from "../../types/dropdown";
-import Icon from "../../uikit/icon";
+import Icon from "../../ui-kit/icon/icon";
 
 interface DropdownProps {
     label: string

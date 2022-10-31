@@ -1,11 +1,11 @@
-import FlexRow from "../../uikit/flex-row";
-import Icon from "../../uikit/icon";
-import InputField from "../../uikit/input/input-field";
-import InputFieldWithIcon from "../../uikit/input/input-field-with-icon";
-import DotNotify from "../../uikit/dot-notify/DotNotify";
-import IconWithDotNotify from "../../uikit/dot-notify/IconWithDotNotify";
+import FlexRow from "../../ui-kit/flex-row/flex-row";
+import Icon from "../../ui-kit/icon/icon";
+import InputField from "../../ui-kit/input/input-field";
+import InputFieldWithIcon from "../../ui-kit/input/input-field-with-icon";
+import DotNotify from "../../ui-kit/dot-notify/DotNotify";
+import IconWithDotNotify from "../../ui-kit/dot-notify/IconWithDotNotify";
 import Dropdown from "../dropdown/dropdown";
-import InputFieldWithDropdown from "../../uikit/input/input-field-with-dropdown";
+import InputFieldWithDropdown from "../../ui-kit/input/input-field-with-dropdown";
 import {useState} from "react";
 
 const Header = () => {

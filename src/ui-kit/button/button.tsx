@@ -1,6 +1,6 @@
 import React from "react";
 import {IconPosition} from "../../types/icon";
-import Icon from "../icon";
+import Icon from "../icon/icon";
 
 type ButtonColor = "primary" | "secondary" | "transparently-primary" | "transparently-secondary"
 type ButtonSize = "large" | "medium" | "small"
