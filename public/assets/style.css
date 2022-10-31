@@ -112,6 +112,10 @@ body {
     grid-template-areas: ". content .";
 }
 
+.content-container {
+    margin: 64px 0;
+}
+
 /* header */
 
 .header {
@@ -395,4 +399,123 @@ body {
     border-radius: 12px;
     padding: 5px 15px;
     z-index: 999;
+}
+
+/* button */
+
+.button {
+    width: max-content;
+    font-size: 15px;
+    font-weight: 700;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.button label {
+    cursor: pointer;
+}
+
+/* button colors */
+
+.button.button-primary {
+    border: 2px solid var(--C2-C);
+    background-color: var(--C1-H);
+}
+
+.button.button-secondary {
+    background-color: var(--C2-A);
+    border: 2px solid var(--C2-B);
+    color: var(--C1-H);
+}
+
+.button.button-transparently-primary {
+    background-color: var(--C1-F);
+    border: 2px solid var(--C1-F);
+}
+
+.button.button-transparently-secondary {
+    background-color: var(--C1-H);
+    border: 2px solid var(--C1-H);
+}
+
+.button.button-secondary label {
+    color: var(--C1-H);
+}
+
+/* button-sizes */
+
+.button.button-large {
+    padding: 18px 48px;
+}
+
+.button.button-medium {
+    padding: 12px 16px;
+}
+
+.button.button-small {
+    padding: 6px 12px;
+}
+
+/* button icon */
+
+.button-icon {
+    display: flex;
+    align-items: center;
+}
+
+.button-icon span {
+    font-size: 16px;
+    height: max-content;
+    color: var(--C1-H);
+}
+
+.button-icon-primary span {
+    color: var(--C2-A);
+}
+
+.button-icon-transparently-secondary span {
+    color: var(--C2-A);
+}
+
+.button-icon-left .button-icon {
+    grid-column: 1/2;
+}
+
+.button-icon-left label {
+    grid-column: 2/3;
+}
+
+.button-icon-right .button-icon {
+    grid-column: 2/3;
+}
+
+.button-icon-right label {
+    grid-column: 1/2;
+}
+
+/* banner */
+
+.banner {
+    padding: 48px 33px 32px 33px;
+    display: grid;
+    grid-gap: 94px 0;
+    border-radius: 12px;
+    background: var(--C2-E);
+}
+
+.banner-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--C2-A);
+}
+
+.banner-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--C1-A);
 }

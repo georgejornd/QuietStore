@@ -4,7 +4,7 @@ interface ContainerProps {
     children: JSX.Element | JSX.Element[] | string
 }
 
-const Container: React.FC<ContainerProps> = ({children}) => {
+const PageContainer: React.FC<ContainerProps> = ({children}) => {
     return (
         <div className="container">
             <div className="content">
@@ -14,4 +14,4 @@ const Container: React.FC<ContainerProps> = ({children}) => {
     )
 }
 
-export default Container
+export default PageContainer

@@ -1,8 +1,9 @@
 import React from "react";
+import {IconPosition} from "../../types/icon";
 
 interface InputFieldWithIconProps {
     children: JSX.Element[]
-    iconPosition: "left" | "right"
+    iconPosition: IconPosition
 }
 
 const InputFieldWithIcon: React.FC<InputFieldWithIconProps> = ({children, iconPosition}) => {
