@@ -1,5 +1,5 @@
 import React from "react";
-import Tag from "../../ui-kit/tag/tag";
+import Tag from "../../ui-kit/text/tag";
 
 const tags = ["Beans", "Carrots", "Apples", "Garlic", "Mushrooms", "Tomatoes", "Chilli peppers", "Broccoli", "Watermelons", "Oranges", "Bananas", "Grapes", "Cherries", "Seo tag", "Fish", "Fresh food", "Lemons"]
 
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                 <div className="footer-tags">
                     <div className="footer-title">Product tags</div>
                     <div className="footer-tag-list">
-                        {tags.map(tag => <Tag label={tag} color="secondary" size="small" />)}
+                        {tags.map(tag => <Tag label={tag} color="secondary" size="small" key={tag} />)}
                     </div>
                 </div>
                 <div className="footer-copyright">Copyright © 2022 localhost:3000</div>

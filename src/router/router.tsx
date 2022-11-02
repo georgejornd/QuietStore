@@ -1,15 +1,15 @@
 import Index from "../pages/Index";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import NotFound from "../pages/NotFound";
+import Products from "../pages/Products";
 
 const Router = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     )
 }
 

@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({label, color, size, arrowPosition}) => {
 
             {arrowPosition &&
                 <div className={`button-icon button-icon-${color}`}>
-                    <Icon symbol={`chevron_${arrowPosition}`} />
+                    <Icon symbol={`chevron-${arrowPosition}-bold`} />
                 </div>
             }
         </div>

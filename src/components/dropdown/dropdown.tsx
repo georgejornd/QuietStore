@@ -16,7 +16,7 @@ const Dropdown: React.FC<DropdownProps> = ({label, options}) => {
         <div className={`dropdown${isActive ? ' dropdown-active' : ''}`} onClick={handleChange}>
             <div className="dropdown-label">
                 <label>{label}</label>
-                <Icon symbol="expand_more" />
+                <Icon symbol="chevron-down-bold" />
             </div>
 
             <div className="dropdown-options" onClick={e => e.stopPropagation()}>

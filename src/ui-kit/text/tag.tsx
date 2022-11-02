@@ -5,18 +5,19 @@ type TagColor = "primary" | "secondary" | "transparently"
 type TagSize = "medium" | "small"
 
 interface TagProps {
-    label: string
+    label: string | number
     color: TagColor
     size: TagSize
+    pointer?: boolean
     closeIcon?: boolean
     onClose?: () => void
 }
 
-const Tag: React.FC<TagProps> = ({label, color, size, closeIcon, onClose}) => {
+const Tag: React.FC<TagProps> = ({label, color, size, pointer, closeIcon, onClose}) => {
     return (
-        <div className={`tag tag-${color} tag-${size}`}>
+        <div className={`tag tag-${color} tag-${size}${pointer || closeIcon ? ' pointer' : ''}`}>
             {label}
-            {closeIcon && <Icon symbol="close" onClick={onClose} />}
+            {closeIcon && <Icon symbol="actions-close-simple" onClick={onClose} />}
         </div>
     )
 }

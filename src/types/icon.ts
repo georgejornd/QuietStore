@@ -1,1 +1,1 @@
-export type IconPosition = "left" | "right"
+export type IconPosition = "left" | "right" | "down" | "up"

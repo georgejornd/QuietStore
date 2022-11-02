@@ -1,20 +1,9 @@
 import React from "react";
-import Button from "../../ui-kit/button/button";
-import Tag from "../../ui-kit/tag/tag";
+import {ProductVariantProps} from "../../../types/product";
+import Tag from "../../text/tag";
+import Button from "../../button/button";
 
-interface ProductBlockProps {
-    title: string
-    description: string
-    price: number
-    currency: "USD" | "RUB"
-    discount?: number
-    rating?: number
-    border?: boolean
-}
-
-const ProductBlock: React.FC<ProductBlockProps> = ({title, description, price, currency, discount, rating, border}) => {
-    const discountedPrice = (discount && discount <= 100) ? (price - ((price / 100) * discount)) : 0
-
+const ProductGridVariant: React.FC<ProductVariantProps> = ({title, description, price, discountedPrice, currency, discount, rating, border}) => {
     return (
         <div className={`product-block${border ? ' product-block-border' : ''}`}>
             <div className="product-block-image">
@@ -37,4 +26,4 @@ const ProductBlock: React.FC<ProductBlockProps> = ({title, description, price, c
     )
 }
 
-export default ProductBlock
+export default ProductGridVariant

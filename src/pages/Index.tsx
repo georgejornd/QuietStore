@@ -3,8 +3,8 @@ import PageContainer from "../ui-kit/container/page-сontainer";
 import Button from "../ui-kit/button/button";
 import Banner from "../ui-kit/banner/banner";
 import ContentContainer from "../ui-kit/container/content-container";
-import ProductBlock from "../components/product/product-block";
-import ProductList from "../ui-kit/product/product-list";
+import Product from "../components/product/Product";
+import ProductGridList from "../ui-kit/product/product-grid-list";
 import FlexRow from "../ui-kit/flex-row/flex-row";
 
 const Index: FC = () => {
@@ -20,59 +20,67 @@ const Index: FC = () => {
             <ContentContainer>
                 <div className="title-block title-center">Best selling</div>
 
-                <ProductList top={32}>
-                    <ProductBlock
+                <ProductGridList top={32}>
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         discount={20}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
 
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         discount={20}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                </ProductList>
+                </ProductGridList>
             </ContentContainer>
             <ContentContainer>
                 <FlexRow style={{width: "100%", justifyContent: "space-between"}}>
@@ -80,32 +88,36 @@ const Index: FC = () => {
                     <Button label="More in phones" color="transparently-secondary" size="small" arrowPosition="right" />
                 </FlexRow>
 
-                <ProductList top={32}>
-                    <ProductBlock
+                <ProductGridList top={32}>
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                    <ProductBlock
+                    <Product
+                        variantView="grid"
                         title="Product title"
                         description="Space for a small product description"
                         price={36.99}
                         currency="USD"
                     />
-                </ProductList>
+                </ProductGridList>
             </ContentContainer>
         </PageContainer>
     )
