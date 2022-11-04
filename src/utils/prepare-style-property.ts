@@ -1,0 +1,1 @@
+export const prepareStyleProperty = (magnitude: string, value?: number): string | undefined => value ? value + magnitude : undefined

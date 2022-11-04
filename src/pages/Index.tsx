@@ -1,15 +1,16 @@
 import React, {FC} from "react";
-import PageContainer from "../ui-kit/container/page-сontainer";
 import Button from "../ui-kit/button/button";
 import Banner from "../ui-kit/banner/banner";
 import ContentContainer from "../ui-kit/container/content-container";
 import Product from "../components/product/Product";
-import ProductGridList from "../ui-kit/product/product-grid-list";
 import FlexRow from "../ui-kit/flex-row/flex-row";
+import Title from "../ui-kit/text/title";
+import {products} from "../consts";
+import ProductGridList from "../ui-kit/product/product-grid-list";
 
 const Index: FC = () => {
     return (
-        <PageContainer>
+        <>
             <ContentContainer>
                 <Banner
                     title="Space for heading"
@@ -18,108 +19,43 @@ const Index: FC = () => {
                 />
             </ContentContainer>
             <ContentContainer>
-                <div className="title-block title-center">Best selling</div>
+                <Title text="Best selling" position="center" />
 
-                <ProductGridList top={32}>
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        discount={20}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        discount={20}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
+                <ProductGridList top={32} gap={30}>
+                    {products.map(product =>
+                        <Product
+                            key={product.id}
+                            variantView="grid"
+                            id={product.id}
+                            title={product.title}
+                            description={product.description}
+                            price={product.price}
+                            currency={product.currency}
+                        />
+                    )}
                 </ProductGridList>
             </ContentContainer>
             <ContentContainer>
-                <FlexRow style={{width: "100%", justifyContent: "space-between"}}>
-                    <div className="title-block">Phones</div>
+                <FlexRow fullWidth={true} style={{justifyContent: "space-between"}}>
+                    <Title text="Phones" />
                     <Button label="More in phones" color="transparently-secondary" size="small" arrowPosition="right" />
                 </FlexRow>
 
-                <ProductGridList top={32}>
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
-                    <Product
-                        variantView="grid"
-                        title="Product title"
-                        description="Space for a small product description"
-                        price={36.99}
-                        currency="USD"
-                    />
+                <ProductGridList top={32} gap={30}>
+                    {products.map(product =>
+                        <Product
+                            key={product.id}
+                            variantView="grid"
+                            id={product.id}
+                            title={product.title}
+                            description={product.description}
+                            price={product.price}
+                            currency={product.currency}
+                        />
+                    )}
                 </ProductGridList>
             </ContentContainer>
-        </PageContainer>
+        </>
     )
 }
 

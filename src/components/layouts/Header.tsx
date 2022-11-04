@@ -14,30 +14,32 @@ const Header = () => {
 
     return (
         <div className="header">
-            <div className="header-left-side">
-                <Link to="/" className="header-title">QuietStore</Link>
-            </div>
-            <div className="header-center">
-                <InputFieldWithDropdown>
-                    <Dropdown label="All categories" options={[{label: "123"}, {label: "312"}]} />
+            <div className="header-top-side">
+                <div className="header-left-side">
+                    <Link to="/" className="header-title">QuietStore</Link>
+                </div>
+                <div className="header-center">
+                    <InputFieldWithDropdown>
+                        <Dropdown label="All categories" options={[{label: "123"}, {label: "312"}]} />
 
-                    <InputFieldWithIcon iconPosition="right">
-                        <Icon symbol="actions-search" />
-                        <InputField value={value} onChange={e => setValue(e.target.value)} placeholder="Search Products" />
-                    </InputFieldWithIcon>
-                </InputFieldWithDropdown>
-            </div>
-            <div className="header-right-side">
-                <FlexRow gap={34}>
-                    <Icon symbol="actions-user" />
-                    <IconWithDotNotify>
-                        <Icon symbol="ecommerce-basket" />
-                        <DotNotify n={4} />
-                    </IconWithDotNotify>
-                </FlexRow>
+                        <InputFieldWithIcon iconPosition="right">
+                            <Icon symbol="actions-search" />
+                            <InputField value={value} onChange={e => setValue(e.target.value)} placeholder="Search Products" />
+                        </InputFieldWithIcon>
+                    </InputFieldWithDropdown>
+                </div>
+                <div className="header-right-side">
+                    <FlexRow gap={34}>
+                        <Icon symbol="actions-user" />
+                        <IconWithDotNotify>
+                            <Icon symbol="ecommerce-basket" />
+                            <DotNotify n={4} />
+                        </IconWithDotNotify>
+                    </FlexRow>
+                </div>
             </div>
 
-            <div className="header-categories">
+            <FlexRow gap={40} fullWidth={true} className="header-categories">
                 <Link to="/products" className="header-categories-item">
                     Phones
                 </Link>
@@ -59,7 +61,7 @@ const Header = () => {
                 <Link to="/products" className="header-categories-item">
                     Auto things
                 </Link>
-            </div>
+            </FlexRow>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import ProductGridVariant from "../../ui-kit/product/view-variants/product-grid-variant";
-import {InitialProductProps, ProductViewVariant} from "../../types/product";
+import {InitialProductProps, ProductViewVariant} from "../../types/product/product";
 
 interface ProductProps extends InitialProductProps{
     variantView: ProductViewVariant

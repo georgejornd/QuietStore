@@ -7,9 +7,7 @@ interface ContainerProps {
 const PageContainer: React.FC<ContainerProps> = ({children}) => {
     return (
         <div className="container">
-            <div className="content">
-                {children}
-            </div>
+            {children}
         </div>
     )
 }

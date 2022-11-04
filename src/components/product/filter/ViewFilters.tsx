@@ -6,7 +6,7 @@ import Tag from "../../../ui-kit/text/tag";
 
 const ViewFilters = () => {
     return (
-        <FlexRow style={{justifyContent: "space-between", width: "100%"}}>
+        <FlexRow fullWidth={true} style={{justifyContent: "space-between"}}>
             <Title text="Phones" size={32} />
 
             <FlexRow gap={24}>

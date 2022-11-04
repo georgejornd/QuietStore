@@ -3,6 +3,7 @@ import Router from "./router/router";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
 import {BrowserRouter} from "react-router-dom";
+import PageContainer from "./ui-kit/container/page-сontainer";
 
 const App = () => {
     return (
@@ -10,7 +11,9 @@ const App = () => {
             <main className="main">
                 <div className="content box-shadow">
                     <Header />
-                    <Router />
+                    <PageContainer>
+                        <Router />
+                    </PageContainer>
                     <Footer />
                 </div>
             </main>

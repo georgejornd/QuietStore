@@ -1,7 +1,7 @@
 import React from "react";
 import ShortFilterContainer from "../../../../ui-kit/container/short-filter-container";
 import FlexRow from "../../../../ui-kit/flex-row/flex-row";
-import {ISelectFilter} from "../../../../types/filter";
+import {ISelectFilter} from "../../../../types/product/filter/filter";
 
 interface ShortSelectFilterProps {
     filters: ISelectFilter[]
