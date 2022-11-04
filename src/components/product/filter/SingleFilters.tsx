@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import FlexRow from "../../../ui-kit/flex-row/flex-row";
 import Tag from "../../../ui-kit/text/tag";
-import ShortSelectFilter from "./short-filters/short-select-filter";
+import SingleSelectFilter from "./single-filters/single-select-filter";
 import {ICheckboxFilter, ISelectFilter} from "../../../types/product/filter/filter";
-import ShortCheckboxFilter from "./short-filters/short-checkbox-filter";
+import SingleCheckboxFilter from "./single-filters/single-checkbox-filter";
 
-const ShortFilters = () => {
+const SingleFilters = () => {
     const [select, setSelect] = useState<ISelectFilter>({id: "all", label: ""})
     const [checkbox, setCheckbox] = useState<ICheckboxFilter>({id: "123", label: "Checkbox filter", selected: true})
 
@@ -14,10 +14,10 @@ const ShortFilters = () => {
     const handleChangeCheckbox = (b: boolean) => setCheckbox(prev => ({...prev, selected: b}))
 
     return (
-        <div className="short-filters">
+        <div>
             <FlexRow gap={16} top={16}>
-                <ShortSelectFilter filters={selectFilters} current={select} setCurrent={setSelect} />
-                <ShortCheckboxFilter checkbox={checkbox} setSelected={handleChangeCheckbox} count="Nbm" />
+                <SingleSelectFilter filters={selectFilters} current={select} setCurrent={setSelect} />
+                <SingleCheckboxFilter checkbox={checkbox} setSelected={handleChangeCheckbox} count="Nbm" />
             </FlexRow>
             <FlexRow gap={12} top={16}>
                 <div className="applied-filters-label">Applied filters:</div>
@@ -30,4 +30,4 @@ const ShortFilters = () => {
     )
 }
 
-export default ShortFilters
+export default SingleFilters

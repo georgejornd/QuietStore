@@ -1,14 +1,14 @@
 import Navigation from "../components/navigation/Navigation";
 import ViewFilters from "../components/product/filter/ViewFilters";
-import ShortFilters from "../components/product/filter/ShortFilters";
+import SingleFilters from "../components/product/filter/SingleFilters";
 import FlexRow from "../ui-kit/flex-row/flex-row";
 import CategoriesList from "../components/product/filter/CategoriesList";
 import BlockContainer from "../ui-kit/container/block-container";
-import DeployedCheckboxFilter from "../components/product/filter/deployed-filters/deployed-checkbox-filter";
+import MultipleCheckboxFilter from "../components/product/filter/multiple-filters/multiple-checkbox-filter";
 import {useState} from "react";
 import {ICheckboxFilter, ICheckboxRatingFilter} from "../types/product/filter/filter";
 import {c_checkboxRatingFilters, c_checkboxFilters, products} from "../consts";
-import DeployedCheckboxRatingFilter from "../components/product/filter/deployed-filters/deployed-checkbox-rating-filter";
+import MultipleCheckboxRatingFilter from "../components/product/filter/multiple-filters/multiple-checkbox-rating-filter";
 import Product from "../components/product/Product";
 
 const Products = () => {
@@ -22,13 +22,13 @@ const Products = () => {
         <>
             <Navigation />
             <ViewFilters />
-            <ShortFilters />
+            <SingleFilters />
 
             <div className="product-page-row">
                 <BlockContainer gap={48} fullWidth={true} style={{width: "270px"}} >
                     <CategoriesList />
-                    <DeployedCheckboxFilter title="Checkbox filters" filters={checkboxFilters} setFilter={handleChangeCheckboxFilters} />
-                    <DeployedCheckboxRatingFilter title="Checkbox rating filters" filters={checkboxRatingFilters} setFilter={handleChangeCheckboxRatingFilters} />
+                    <MultipleCheckboxFilter title="Checkbox filters" filters={checkboxFilters} setFilter={handleChangeCheckboxFilters} />
+                    <MultipleCheckboxRatingFilter title="Checkbox rating filters" filters={checkboxRatingFilters} setFilter={handleChangeCheckboxRatingFilters} />
                 </BlockContainer>
 
                 <FlexRow className="product-page-row-products" style={{flexWrap: "wrap", alignItems: "start"}} gap={30}>

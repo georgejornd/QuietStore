@@ -1,17 +1,17 @@
 import React from "react";
-import ShortFilterContainer from "../../../../ui-kit/container/short-filter-container";
+import SingleFilterContainer from "../../../../ui-kit/container/single-filter-container";
 import FlexRow from "../../../../ui-kit/flex-row/flex-row";
 import {ISelectFilter} from "../../../../types/product/filter/filter";
 
-interface ShortSelectFilterProps {
+interface SingleSelectFilterProps {
     filters: ISelectFilter[]
     current: ISelectFilter
     setCurrent: (filter: ISelectFilter) => void
 }
 
-const ShortSelectFilter: React.FC<ShortSelectFilterProps> = ({filters, current, setCurrent}) => {
+const SingleSelectFilter: React.FC<SingleSelectFilterProps> = ({filters, current, setCurrent}) => {
     return (
-        <ShortFilterContainer>
+        <SingleFilterContainer>
             <FlexRow gap={16}>
                 {filters.map(filter =>
                     <FlexRow className="select-filter-row" gap={8} onClick={() => setCurrent(filter)} key={filter.id}>
@@ -20,8 +20,8 @@ const ShortSelectFilter: React.FC<ShortSelectFilterProps> = ({filters, current, 
                     </FlexRow>
                 )}
             </FlexRow>
-        </ShortFilterContainer>
+        </SingleFilterContainer>
     )
 }
 
-export default ShortSelectFilter
+export default SingleSelectFilter

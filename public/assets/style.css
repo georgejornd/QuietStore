@@ -763,9 +763,9 @@ body {
     color: var(--C1-A);
 }
 
-/* short filter */
+/* single filter */
 
-.short-filter-container {
+.single-filter-container {
     background: var(--C1-G);
     border: 1px solid var(--C1-D);
     border-radius: 12px;
@@ -778,7 +778,7 @@ body {
     color: var(--C1-C);
 }
 
-/* short select filter */
+/* single select filter */
 
 .select-filter-row, .select-filter-row label {
     cursor: pointer;
@@ -798,7 +798,7 @@ body {
     border: 6px solid var(--C1-A);
 }
 
-/* short checkbox filter */
+/* single checkbox filter */
 
 .checkbox {
     width: 20px;
@@ -817,14 +817,14 @@ body {
     filter: var(--C1-G-i);
 }
 
-/* deployed filters */
+/* multiple filters */
 
-.deployed-checkbox-filter {
+.multiple-checkbox-filter {
     cursor: pointer;
     width: max-content;
 }
 
-.deployed-checkbox-filter label {
+.multiple-checkbox-filter label {
     cursor: pointer;
 }
 

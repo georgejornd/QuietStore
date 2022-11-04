@@ -4,12 +4,12 @@ interface FilterContainerProps {
     children: JSX.Element | JSX.Element[]
 }
 
-const ShortFilterContainer: React.FC<FilterContainerProps> = ({children}) => {
+const SingleFilterContainer: React.FC<FilterContainerProps> = ({children}) => {
     return (
-        <div className="short-filter-container">
+        <div className="single-filter-container">
             {children}
         </div>
     )
 }
 
-export default ShortFilterContainer
+export default SingleFilterContainer

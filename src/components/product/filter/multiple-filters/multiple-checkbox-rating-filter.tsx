@@ -5,17 +5,17 @@ import Checkbox from "../../../../ui-kit/icon/checkbox";
 import Stars from "../../Stars";
 import {ICheckboxRatingFilter} from "../../../../types/product/filter/filter";
 
-export interface DeployedCheckboxRatingFilterProps {
+export interface MultipleCheckboxRatingFilterProps {
     title: string
     filters: ICheckboxRatingFilter[]
     setFilter: (id: string) => void
 }
 
-const DeployedCheckboxRatingFilter: React.FC<DeployedCheckboxRatingFilterProps> = ({title, filters, setFilter}) => {
+const MultipleCheckboxRatingFilter: React.FC<MultipleCheckboxRatingFilterProps> = ({title, filters, setFilter}) => {
     return (
         <BlockWithTitleContainer title={title}>
             {filters.map(filter =>
-                <FlexRow className="deployed-checkbox-filter" gap={8} onClick={() => setFilter(filter.id)} key={filter.id}>
+                <FlexRow className="multiple-checkbox-filter" gap={8} onClick={() => setFilter(filter.id)} key={filter.id}>
                     <Checkbox selected={filter.selected} />
                     <Stars fill="primary" rating={filter.rating} />
                 </FlexRow>
@@ -24,4 +24,4 @@ const DeployedCheckboxRatingFilter: React.FC<DeployedCheckboxRatingFilterProps> 
     )
 }
 
-export default DeployedCheckboxRatingFilter
+export default MultipleCheckboxRatingFilter
