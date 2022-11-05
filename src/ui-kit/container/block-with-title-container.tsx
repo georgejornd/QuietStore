@@ -5,14 +5,15 @@ import BlockContainer from "./block-container";
 interface BlockWithTitleContainerProps {
     children: JSX.Element | JSX.Element[]
     title: string
+    childrenGap?: number
 }
 
-const BlockWithTitleContainer: React.FC<BlockWithTitleContainerProps> = ({children, title}) => {
+const BlockWithTitleContainer: React.FC<BlockWithTitleContainerProps> = ({children, title, childrenGap = 12}) => {
     return (
         <BlockContainer gap={16} fullWidth={true}>
             <Title text={title} />
 
-            <BlockContainer gap={12} fullWidth={true}>
+            <BlockContainer gap={childrenGap} fullWidth={true}>
                 {children}
             </BlockContainer>
         </BlockContainer>

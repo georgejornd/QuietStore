@@ -14,3 +14,5 @@ export interface ICheckboxRatingFilter {
     selected: boolean
     rating: number
 }
+
+export type IRange = [number, number]
