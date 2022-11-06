@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {IOption} from "../../types/dropdown";
+import {IOption} from "../../types/dropdown/dropdown";
 import Icon from "../../ui-kit/icon/icon";
 
 interface DropdownProps {

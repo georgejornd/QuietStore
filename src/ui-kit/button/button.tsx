@@ -1,5 +1,5 @@
 import React from "react";
-import {IconPosition} from "../../types/icon";
+import {IconPosition} from "../../types/icon/icon";
 import Icon from "../icon/icon";
 
 type ButtonColor = "primary" | "secondary" | "transparently-primary" | "transparently-secondary"
@@ -9,18 +9,19 @@ interface ButtonProps {
     label: string
     color: ButtonColor
     size: ButtonSize
-    arrowPosition?: IconPosition
+    iconPosition?: IconPosition
+    iconSymbol?: string
     onClick?: () => void
 }
 
-const Button: React.FC<ButtonProps> = ({label, color, size, arrowPosition}) => {
+const Button: React.FC<ButtonProps> = ({label, color, size, iconPosition, iconSymbol}) => {
     return (
-        <div className={`button${arrowPosition ? " button-icon-".concat(arrowPosition) : ''} button-${color} button-${size}`}>
+        <div className={`button ${iconPosition ? " button-icon-".concat(iconPosition) : ''} button-${color} button-${size}`}>
             <label>{label}</label>
 
-            {arrowPosition &&
+            {(iconPosition || iconSymbol) &&
                 <div className={`button-icon button-icon-${color}`}>
-                    <Icon symbol={`chevron-${arrowPosition}-bold`} />
+                    <Icon symbol={iconSymbol ? iconSymbol : `chevron-${iconPosition}-bold`} />
                 </div>
             }
         </div>

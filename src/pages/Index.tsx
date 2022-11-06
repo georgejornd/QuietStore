@@ -15,7 +15,7 @@ const Index: FC = () => {
                 <Banner
                     title="Space for heading"
                     subtitle="Banner subfocus"
-                    buttons={<Button label="Read more" size="medium" color="secondary" arrowPosition="right" />}
+                    buttons={<Button label="Read more" size="medium" color="secondary" iconPosition="right" />}
                 />
             </ContentContainer>
             <ContentContainer>
@@ -30,6 +30,7 @@ const Index: FC = () => {
                             title={product.title}
                             description={product.description}
                             price={product.price}
+                            discount={product.discount}
                             currency={product.currency}
                         />
                     )}
@@ -38,7 +39,7 @@ const Index: FC = () => {
             <ContentContainer>
                 <FlexRow fullWidth={true} style={{justifyContent: "space-between"}}>
                     <Title text="Phones" />
-                    <Button label="More in phones" color="transparently-secondary" size="small" arrowPosition="right" />
+                    <Button label="More in phones" color="transparently-secondary" size="small" iconPosition="right" />
                 </FlexRow>
 
                 <ProductGridList top={32} gap={30}>
@@ -50,6 +51,7 @@ const Index: FC = () => {
                             title={product.title}
                             description={product.description}
                             price={product.price}
+                            discount={product.discount}
                             currency={product.currency}
                         />
                     )}

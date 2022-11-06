@@ -10,7 +10,7 @@ interface BlockWithTitleContainerProps {
 
 const BlockWithTitleContainer: React.FC<BlockWithTitleContainerProps> = ({children, title, childrenGap = 12}) => {
     return (
-        <BlockContainer gap={16} fullWidth={true}>
+        <BlockContainer gap={16} fullWidth={true} style={{height: "max-content"}}>
             <Title text={title} />
 
             <BlockContainer gap={childrenGap} fullWidth={true}>

@@ -1,5 +1,5 @@
 import React from "react";
-import {IconPosition} from "../../types/icon";
+import {IconPosition} from "../../types/icon/icon";
 
 interface InputFieldWithIconProps {
     children: JSX.Element[]
