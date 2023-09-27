@@ -4,6 +4,7 @@
   "semi": false,
   "tabWidth": 4,
   "jsxBracketSameLine": false,
-  "endOfLine": "cr",
-  "arrowParens": "avoid"
+  "endOfLine": "crlf",
+  "arrowParens": "avoid",
+  "insertFinalNewLine": "false"
 }
